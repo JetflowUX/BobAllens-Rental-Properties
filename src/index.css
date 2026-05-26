@@ -9,9 +9,20 @@
 /* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-cream text-charcoal font-sans antialiased selection:bg-olive selection:text-cream;
+    overflow-x: hidden;
   }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }

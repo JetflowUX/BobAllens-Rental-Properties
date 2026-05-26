@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 export function Contact() {
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    inquiry: '',
-    message: ''
+    name: "",
+    email: "",
+    inquiry: "",
+    message: "",
   });
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formState);
+    console.log("Form submitted:", formState);
   };
   return (
-    <div className="w-full pt-32 pb-24 px-6 md:px-12 bg-cream min-h-screen">
+    <div className="w-full pt-28 sm:pt-32 pb-20 sm:pb-24 px-4 sm:px-6 md:px-12 bg-cream min-h-screen">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20 md:mb-32 max-w-3xl">
-          <h1 className="font-serif text-5xl md:text-7xl text-charcoal mb-6 tracking-tight">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-charcoal mb-6 tracking-tight">
             Private <span className="italic font-light">Inquiries</span>
           </h1>
-          <p className="font-sans text-warmgray text-lg leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-warmgray leading-relaxed max-w-2xl">
             Whether you are seeking a residence or wish to discuss adding your
             property to our portfolio, we invite you to connect with our team.
           </p>
@@ -71,19 +71,20 @@ export function Contact() {
                     id="name"
                     value={formState.name}
                     onChange={(e) =>
-                    setFormState({
-                      ...formState,
-                      name: e.target.value
-                    })
+                      setFormState({
+                        ...formState,
+                        name: e.target.value,
+                      })
                     }
                     className="block w-full border-0 border-b border-divider bg-transparent py-3 px-0 text-charcoal placeholder:text-transparent focus:border-charcoal focus:ring-0 peer transition-colors"
                     placeholder="Name"
-                    required />
-                  
+                    required
+                  />
+
                   <label
                     htmlFor="name"
-                    className="absolute left-0 top-3 -translate-y-6 text-xs font-sans uppercase tracking-widest text-warmgray transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-sm peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-translate-y-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-charcoal">
-                    
+                    className="absolute left-0 top-3 -translate-y-6 text-xs font-sans uppercase tracking-widest text-warmgray transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-sm peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-translate-y-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-charcoal"
+                  >
                     Name
                   </label>
                 </div>
@@ -94,19 +95,20 @@ export function Contact() {
                     id="email"
                     value={formState.email}
                     onChange={(e) =>
-                    setFormState({
-                      ...formState,
-                      email: e.target.value
-                    })
+                      setFormState({
+                        ...formState,
+                        email: e.target.value,
+                      })
                     }
                     className="block w-full border-0 border-b border-divider bg-transparent py-3 px-0 text-charcoal placeholder:text-transparent focus:border-charcoal focus:ring-0 peer transition-colors"
                     placeholder="Email"
-                    required />
-                  
+                    required
+                  />
+
                   <label
                     htmlFor="email"
-                    className="absolute left-0 top-3 -translate-y-6 text-xs font-sans uppercase tracking-widest text-warmgray transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-sm peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-translate-y-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-charcoal">
-                    
+                    className="absolute left-0 top-3 -translate-y-6 text-xs font-sans uppercase tracking-widest text-warmgray transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-sm peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-translate-y-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-charcoal"
+                  >
                     Email Address
                   </label>
                 </div>
@@ -117,14 +119,14 @@ export function Contact() {
                   id="inquiry"
                   value={formState.inquiry}
                   onChange={(e) =>
-                  setFormState({
-                    ...formState,
-                    inquiry: e.target.value
-                  })
+                    setFormState({
+                      ...formState,
+                      inquiry: e.target.value,
+                    })
                   }
                   className="block w-full border-0 border-b border-divider bg-transparent py-3 px-0 text-charcoal focus:border-charcoal focus:ring-0 appearance-none font-sans"
-                  required>
-                  
+                  required
+                >
                   <option value="" disabled>
                     Select Inquiry Type
                   </option>
@@ -138,14 +140,14 @@ export function Contact() {
                     className="h-4 w-4"
                     fill="none"
                     stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="1.5"
-                      d="M19 9l-7 7-7-7">
-                    </path>
+                      d="M19 9l-7 7-7-7"
+                    ></path>
                   </svg>
                 </div>
               </div>
@@ -155,34 +157,34 @@ export function Contact() {
                   id="message"
                   value={formState.message}
                   onChange={(e) =>
-                  setFormState({
-                    ...formState,
-                    message: e.target.value
-                  })
+                    setFormState({
+                      ...formState,
+                      message: e.target.value,
+                    })
                   }
                   rows={4}
                   className="block w-full border-0 border-b border-divider bg-transparent py-3 px-0 text-charcoal placeholder:text-transparent focus:border-charcoal focus:ring-0 peer transition-colors resize-none"
                   placeholder="Message"
-                  required>
-                </textarea>
+                  required
+                ></textarea>
                 <label
                   htmlFor="message"
-                  className="absolute left-0 top-3 -translate-y-6 text-xs font-sans uppercase tracking-widest text-warmgray transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-sm peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-translate-y-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-charcoal">
-                  
+                  className="absolute left-0 top-3 -translate-y-6 text-xs font-sans uppercase tracking-widest text-warmgray transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-sm peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:-translate-y-6 peer-focus:text-xs peer-focus:uppercase peer-focus:tracking-widest peer-focus:text-charcoal"
+                >
                   Message
                 </label>
               </div>
 
               <button
                 type="submit"
-                className="inline-block border border-charcoal bg-charcoal text-cream px-10 py-4 font-sans text-xs uppercase tracking-widest hover:bg-transparent hover:text-charcoal transition-colors">
-                
+                className="inline-block border border-charcoal bg-charcoal text-cream px-10 py-4 font-sans text-xs uppercase tracking-widest hover:bg-transparent hover:text-charcoal transition-colors"
+              >
                 Submit Inquiry
               </button>
             </form>
           </div>
         </div>
       </div>
-    </div>);
-
+    </div>
+  );
 }

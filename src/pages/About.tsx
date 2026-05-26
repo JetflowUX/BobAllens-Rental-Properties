@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 export function About() {
   return (
-    <div className="w-full pt-32 pb-24 px-6 md:px-12 bg-cream min-h-screen">
+    <div className="w-full pt-28 sm:pt-32 pb-20 sm:pb-24 px-4 sm:px-6 md:px-12 bg-cream min-h-screen">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20 md:mb-32 max-w-4xl">
-          <h1 className="font-serif text-5xl md:text-7xl text-charcoal mb-6 tracking-tight">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-charcoal mb-6 tracking-tight">
             The <span className="italic font-light">Standard</span> of Living
           </h1>
         </header>
@@ -15,8 +15,8 @@ export function About() {
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
                 alt="Architectural detail"
-                className="w-full h-full object-cover" />
-              
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -62,20 +62,20 @@ export function About() {
               </h3>
               <ul className="space-y-6">
                 {[
-                {
-                  title: 'Curation',
-                  desc: 'We select only properties with distinct architectural character and uncompromising quality.'
-                },
-                {
-                  title: 'Discretion',
-                  desc: 'We protect the privacy of our clients and property owners with absolute vigilance.'
-                },
-                {
-                  title: 'Service',
-                  desc: 'We anticipate needs before they arise, providing a frictionless living experience.'
-                }].
-                map((value, idx) =>
-                <li key={idx}>
+                  {
+                    title: "Curation",
+                    desc: "We select only properties with distinct architectural character and uncompromising quality.",
+                  },
+                  {
+                    title: "Discretion",
+                    desc: "We protect the privacy of our clients and property owners with absolute vigilance.",
+                  },
+                  {
+                    title: "Service",
+                    desc: "We anticipate needs before they arise, providing a frictionless living experience.",
+                  },
+                ].map((value, idx) => (
+                  <li key={idx}>
                     <h4 className="font-sans text-sm font-medium text-charcoal mb-1">
                       {value.title}
                     </h4>
@@ -83,12 +83,12 @@ export function About() {
                       {value.desc}
                     </p>
                   </li>
-                )}
+                ))}
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>);
-
+    </div>
+  );
 }
